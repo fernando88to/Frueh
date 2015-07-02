@@ -9,62 +9,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-    <link href="{{URL::asset('assets/bootstrap_layout/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="/bootstrap_layout/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     {{--<link href="/assets/bootstrap_layout/css/bootstrap.min.css" rel="stylesheet" type="text/css" />--}}
-    <link href="/assets/bootstrap_layout/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="/bootstrap_layout/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/bootstrap_layout/css/font-awesome.css" rel="stylesheet">
+    <link href="/bootstrap_layout/css/font-awesome.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
-    <link href="/assets/bootstrap_layout/csss/style.css" rel="stylesheet" type="text/css">
-    <link href="/assets/bootstrap_layout/css/pages/signin.css" rel="stylesheet" type="text/css">
+    <link href="/bootstrap_layout/csss/style.css" rel="stylesheet" type="text/css">
+    <link href="/bootstrap_layout/css/pages/signin.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
-<div class="navbar navbar-fixed-top">
 
-    <div class="navbar-inner">
-
-        <div class="container">
-
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-
-            <a class="brand" href="index.html">
-                Bootstrap Admin Template
-            </a>
-
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-
-                    <li class="">
-                        <a href="signup.html" class="">
-                            Don't have an account?
-                        </a>
-
-                    </li>
-
-                    <li class="">
-                        <a href="index.html" class="">
-                            <i class="icon-chevron-left"></i>
-                            Back to Homepage
-                        </a>
-
-                    </li>
-                </ul>
-
-            </div><!--/.nav-collapse -->
-
-        </div> <!-- /container -->
-
-    </div> <!-- /navbar-inner -->
-
-</div> <!-- /navbar -->
 
 
 
