@@ -34,3 +34,8 @@ Route::get("formulario", function(){
 Route::get("guia", function(){
     return view("layouts.guide");
 });
+
+
+Route::get("/banco/","BancoController@index");
+Route::get("/banco/index","BancoController@index");
+Route::get("/banco/create","BancoController@create");
