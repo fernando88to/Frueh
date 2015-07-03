@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3620445668">
+    <data-source source="LOCAL" name="SQLite - Frueh" uuid="d1588351-4ccf-4767-98b1-6c8a3cd15b05">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/storage/fruehsqlite</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

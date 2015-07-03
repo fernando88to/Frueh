@@ -19,3 +19,18 @@ Route::get('/', function () {
 Route::get("/login",function(){
     return view("layouts.login");
 });
+
+Route::get("/index",function(){
+    return view("layouts.index");
+});
+
+Route::get("report", function(){
+    return view("layouts.report");
+});
+
+Route::get("formulario", function(){
+    return view("layouts.formulario");
+});
+Route::get("guia", function(){
+    return view("layouts.guide");
+});

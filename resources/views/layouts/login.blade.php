@@ -77,10 +77,10 @@
 </div> <!-- /login-extra -->
 
 
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="/bootstrap_layout/js/jquery-1.7.2.min.js"></script>
+<script src="/bootstrap_layout/js/bootstrap.js"></script>
 
-<script src="js/signin.js"></script>
+<script src="/bootstrap_layout/js/signin.js"></script>
 
 </body>
 
