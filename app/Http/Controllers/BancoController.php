@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Banco;
+
+
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class BancoController extends Controller
 {
@@ -28,17 +28,25 @@ class BancoController extends Controller
     public function create()
     {
         $banco = new Banco();
+        $banco->setNome("Banco do Brasil");
+
+        
+
         return view("banco.create",["bancoInstance"=>$banco]);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+     *-
      * @return Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $nome = $request->input("nome");
+        $params = $request->all();
+        echo  "teste".$nome;
+        return $nome;
+        //$banco = new Banco(response->getpara)
     }
 
     /**
