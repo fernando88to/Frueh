@@ -20,6 +20,14 @@ class Banco extends Model
     private $codigo_febraban_column="codigo_febraban";
 
 
+    protected $fillable = array("nome","ativo","endereco","codigo_febraban");
+
+    protected $guarded = ["id"];
+
+    protected  $casts = [
+        "ativo"=>"boolean",
+    ];
+
     public function setNome($nome){
         return self::setAttribute($this->nome_Coluna, $nome);
 

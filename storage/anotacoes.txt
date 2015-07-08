@@ -1,0 +1,48 @@
+Para rodar no apache
+editar /etc/apache2/sites-available/000-default.conf
+
+adicionar o conteudo
+
+Alias /Frueh "/var/www/html/Frueh/public"
+<Directory "/var/www/html/Frueh/public">
+   Options Indexes FollowSymLinks Includes ExecCGI
+   AllowOverride All
+   Require all granted
+</Directory>
+
+
+editar o arquivo public/.htaccess
+
+Ele fica com o seguinte conteudo
+
+
+    <IfModule mod_rewrite.c>
+        <IfModule mod_negotiation.c>
+            Options -MultiViews
+        </IfModule>
+
+        Options +FollowSymLinks
+        RewriteEngine On
+        RewriteBase /Frueh
+
+        # Handle Front Controller...
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^ index.php [L]
+    </IfModule>
+
+
+
+
+
+
+
+
+
+
+Dar a seguinte permissão, se não aparece a pagina em branco no apache
+# Group Writable (Group, User Writable)
+$ sudo chmod -R gu+w app/storage
+
+# World-writable (Group, User, Other Writable)
+$ sudo chmod -R guo+w app/storage

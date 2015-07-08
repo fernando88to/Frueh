@@ -5,30 +5,42 @@
 @section("conteudo")
 
     <div class="span12">
-        <div class="widget">
-            <div class="widget-header">
-                <i class="icon-user"></i>
-                <h3>Your Account</h3>
+        <div class="widget widget-table action-table">
+            <div class="widget-header"> <i class="icon-th-list"></i>
+                <h3>Banco  - Lista</h3>
             </div>
-
+            <!-- /widget-header -->
             <div class="widget-content">
-                <form class="form-horizontal" id="edit-profile">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th> Nome </th>
+                        <th> Situação</th>
+                        <th class="td-actions"> </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($bancosList as $banco)
+                        <tr>
+                            <td> {{$banco->getNome()}}</td>
+                            <td> {{$banco->isAtivo() ==true ? 'Ativado' : 'Desativado'}} </td>
+                            <td class="td-actions">
+                                <a href="javascript:;" class="btn btn-small btn-success">
+                                    <i class="btn-icon-only icon-ok"> </i>
+                                </a>
+                                <a href="javascript:;" class="btn btn-danger btn-small">
+                                    <i class="btn-icon-only icon-remove"> </i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
 
-                    <div class="control-group">
-                        <label for="firstname" class="control-label">First Name</label>
-                        <div class="controls">
-                            <input type="text" value="John" id="firstname" class="span6">
-                        </div> <!-- /controls -->
-                    </div>
 
 
-                    <div class="form-actions">
-                        <button class="btn btn-primary" type="submit">Save</button>
-                        <button class="btn">Cancel</button>
-                    </div>
-                </form>
-
+                    </tbody>
+                </table>
             </div>
+            <!-- /widget-content -->
         </div>
     </div>
 @endsection

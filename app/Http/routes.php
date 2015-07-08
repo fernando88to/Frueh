@@ -40,3 +40,4 @@ Route::get("/banco/","BancoController@index");
 Route::get("/banco/index","BancoController@index");
 Route::get("/banco/create","BancoController@create");
 Route::post("/banco/store","BancoController@store");
+Route::get("/banco/list","BancoController@lista");

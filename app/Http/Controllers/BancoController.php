@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Banco;
 
 
+use App\Http\Requests\BancoRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 class BancoController extends Controller
@@ -20,15 +22,21 @@ class BancoController extends Controller
         return view("banco.list");
     }
 
+    public function  lista(){
+        $bancosList = Banco::all();
+        return  view("banco.list",["bancosList"=>$bancosList]);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $banco = new Banco();
-        $banco->setNome("Banco do Brasil");
+        $banco = new Banco($request->all());
+
 
         
 
@@ -40,14 +48,38 @@ class BancoController extends Controller
      *-
      * @return Response
      */
-    public function store(Request $request)
+    public function store(BancoRequest $request)
     {
-        $nome = $request->input("nome");
+
         $params = $request->all();
-        echo  "teste".$nome;
-        return $nome;
-        //$banco = new Banco(response->getpara)
+        $banco = new Banco($params);
+        //$request->validate()-
+        //Banco::create($request->all());
+
+        return redirect("/banco/list");
+
     }
+    /*public function store(Request $request)
+    {
+        $nome = $request->input("ativo");
+        $params = $request->all();
+
+
+        $validator = Validator::make(
+            ["nome"=>$request->input("nome")],
+            ["nome"=> 'required|min:5']
+        );
+        if($validator->fails()){
+            return redirect()->action("BancoController@create",$params);
+        }
+
+        $banco = new Banco($params);
+        $banco->save();
+
+
+        return redirect("/banco/list");
+
+    }*/
 
     /**
      * Display the specified resource.
