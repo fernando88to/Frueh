@@ -8,15 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link href="/Frueh/bootstrap_layout/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Frueh/bootstrap_layout/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="{{ URL::asset("bootstrap_layout/css/bootstrap.min.css")}}" rel="stylesheet">
+
+
+    <link href="{{ URL::asset('bootstrap_layout/css/bootstrap-responsive.min.css')}}" rel="stylesheet" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
-    <link href="/Frueh/bootstrap_layout/css/font-awesome.css" rel="stylesheet">
 
-    <link href="/Frueh/bootstrap_layout/css/style.css" rel="stylesheet">
+    <link href="{{ URL::asset('bootstrap_layout/css/font-awesome.css')}}"  rel="stylesheet"/>
 
-    <link href="/Frueh/bootstrap_layout/css/pages/reports.css" rel="stylesheet">
+
+    <link href="{{URL::asset('bootstrap_layout/css/style.css')}}" rel="stylesheet">
+
+    <link href="{{URL::asset('bootstrap_layout/css/pages/reports.css')}}" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -199,11 +203,11 @@
 </div> <!-- /footer -->
 
 
-<script src="/Frueh/bootstrap_layout/js/jquery-1.7.2.min.js"></script>
-<script src="/Frueh/bootstrap_layout/js/excanvas.min.js"></script>
-<script src="/Frueh/bootstrap_layout/js/chart.min.js" type="text/javascript"></script>
-<script src="/Frueh/bootstrap_layout/js/bootstrap.js"></script>
-<script src="/Frueh/bootstrap_layout/js/base.js"></script>
+<script src="{{ URL::asset('bootstrap_layout/js/jquery-1.7.2.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('bootstrap_layout/js/excanvas.min.js') }}" type="text/javascript"></script>
+<script src="{{URL::asset('bootstrap_layout/js/chart.min.js')}}" type="text/javascript"></script>
+<script src="{{URL::asset('bootstrap_layout/js/bootstrap.js')}}" type="text/javascript"></script>
+<script src="{{URL::asset('bootstrap_layout/js/base.js')}}" type="text/javascript"></script>
 
 
 
