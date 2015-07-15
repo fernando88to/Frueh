@@ -6,6 +6,7 @@ use App\Banco;
 
 
 use App\Http\Requests\BancoRequest;
+use Collective\Html\FormFacade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -35,6 +36,13 @@ class BancoController extends Controller
      */
     public function create(Request $request)
     {
+
+        /*FormFacade::macro('boolean', function($name, $value=false) {
+            $output = FormFacade::hidden($name, false);
+            $output .= FormFacade::checkbox($name, true, $value);
+            return $output;
+        });*/
+
         $banco = new Banco($request->all());
 
 
@@ -53,8 +61,7 @@ class BancoController extends Controller
 
         $params = $request->all();
         $banco = new Banco($params);
-        //$request->validate()-
-        //Banco::create($request->all());
+        $banco->save();
 
         return redirect("/banco/list");
 
